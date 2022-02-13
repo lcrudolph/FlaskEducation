@@ -8,4 +8,5 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    """Testing a method that is the default page of the site"""
     return app.send_static_file("index.html")
