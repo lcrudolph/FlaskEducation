@@ -1,19 +1,22 @@
 // For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.202.3/containers/python-3
 {
-	"name": "Flask Training",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": "..",
-		"args": { 
-			// Update 'VARIANT' to pick a Python version: 3, 3.9, 3.8, 3.7, 3.6.
-			// Append -bullseye or -buster to pin to an OS version.
-			// Use -bullseye variants on local on arm64/Apple Silicon.
-			"VARIANT": "3.9-bullseye",
-			// Options
-			"NODE_VERSION": "lts/*"
-		}
-	},
+	"name": "Flask Training2",
+	//"build": {
+	//	"dockerfile": "Dockerfile",
+	//	"context": "..",
+	//	"args": { 
+	//		// Update 'VARIANT' to pick a Python version: 3, 3.9, 3.8, 3.7, 3.6.
+	//		// Append -bullseye or -buster to pin to an OS version.
+	//		// Use -bullseye variants on local on arm64/Apple Silicon.
+	//		"VARIANT": "3.9-bullseye",
+	//		// Options
+	//		"NODE_VERSION": "lts/*"
+	//	}
+	//},
+	"dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+	"workspaceFolder": "/workspaces",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
