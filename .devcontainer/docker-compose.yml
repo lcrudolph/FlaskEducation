@@ -7,3 +7,9 @@ services:
             dockerfile: .devcontainer/Dockerfile
         user: vscode
         command: sleep infinity
+    mysql:
+        image: mysql:latest
+        volumes:
+            - data-volume:/var/lib/mysql
+volumes:
+    data-volume:
