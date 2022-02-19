@@ -9,6 +9,14 @@ services:
         command: sleep infinity
     mysql:
         image: mysql:latest
+        restart: always
+        environment:
+            MYSQL_DATABASE: db
+            MYSQL_USER: user
+            MYSQL_PASSWORD: mypass143
+            MYSQL_ROOT_PASSWORD: yourpass143
+        ports:
+            - '3306:3306'
         volumes:
             - data-volume:/var/lib/mysql
 volumes:
