@@ -8,7 +8,7 @@ app = Flask(__name__)
 # this secret if for forms
 app.config['SECRET_KEY'] = 'somethingreallysecret'
 # the userid password and server name all come from the docker compose file
-app.config['SQLALCHEMY_DATABASE_URI']='mysql://user:mypass143@mysql/db'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:yourpass143@mysql/db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']='False'
 
 db = SQLAlchemy(app)
